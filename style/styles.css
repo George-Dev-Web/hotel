@@ -1,0 +1,74 @@
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* This makes the menu horizontal */
+  gap: 20px; /* Adjust spacing between items */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+header {
+  text-align: center; /* Centers the header text */
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers the nav */
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers the images */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-container a img {
+  width: 300px; /* Adjust size */
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container a img:hover {
+  transform: scale(1.05); /* Adds hover effect */
+}
+.room-list a {
+  display: inline-block;
+}
