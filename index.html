@@ -18,7 +18,15 @@
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#rooms">Rooms</a></li>
+          <li class="dropdown">
+            <a href="#">Rooms</a>
+            <ul class="dropdown-content">
+              <li><a href="./rooms/room1.html">Luxury Suite</a></li>
+              <li><a href="./rooms/room2.html">Standard Room</a></li>
+              <li><a href="./rooms/room3.html">Deluxe Room</a></li>
+            </ul>
+          </li>
+          <li><a href="#book">Book Now</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -57,6 +65,46 @@
             <p>Modern decor with a stunning view.</p>
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book">
+      <h2>Book Your Stay</h2>
+      <form id="booking-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="room">Room Type</label>
+        <select id="room" name="room" required>
+          <option value="Luxury Suite">Luxury Suite</option>
+          <option value="Standard Room">Standard Room</option>
+          <option value="Deluxe Room">Deluxe Room</option>
+        </select>
+
+        <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" name="checkin" required min="" />
+
+        <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" name="checkout" required min="" />
+
+        <label for="special-requests">Special Requests</label>
+        <textarea id="special-requests" name="special-requests"></textarea>
+
+        <button type="submit">Submit Booking</button>
+      </form>
+
+      <div id="confirmation-message" style="display: none; margin-top: 20px">
+        <p>
+          Thank you for your booking! We will send you a confirmation email
+          shortly.
+        </p>
       </div>
     </section>
 

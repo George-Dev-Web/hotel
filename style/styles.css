@@ -1,16 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 header {
+  background-color: #333;
   text-align: center;
-  padding: 20px;
-  background-color: #222;
-  color: white;
+  color: wheat;
 }
-
+/* Navigation Styling */
 nav ul {
   list-style: none;
   display: flex;
@@ -18,6 +11,11 @@ nav ul {
   gap: 20px;
   padding: 0;
   margin: 0;
+  position: relative; /* for positioning the dropdown */
+}
+
+nav ul li {
+  position: relative; /* to position dropdown relative to this item */
 }
 
 nav ul li a {
@@ -34,31 +32,91 @@ nav ul li a:hover {
   background-color: #555;
 }
 
-.image-container {
+/* Dropdown Menu Styling */
+nav ul li.dropdown .dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+nav ul li .dropdown-content li {
+  padding: 10px;
+}
+
+nav ul li .dropdown-content li a {
+  padding: 8px 15px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li .dropdown-content li a:hover {
+  background-color: #555;
+}
+
+/* Booking Form Styling */
+#booking-form {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.image-container a img {
-  width: 300px;
-  height: auto;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.image-container a img:hover {
-  transform: scale(1.05);
+#booking-form label {
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
-.room-list a {
-  display: inline-block;
+#booking-form input,
+#booking-form select,
+#booking-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#booking-form button {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#booking-form button:hover {
+  background-color: #555;
+}
+
+/* Confirmation Message */
+#confirmation-message {
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #222;
+  background-color: #333;
   color: white;
+  text-align: center;
+}
+section book {
+  text-align: center;
 }
